@@ -1,0 +1,21 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Upload Files MongoDB</title>
+	<style>
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<h1>Upload new Video</h1>
+	<form method="POST" action="/videos/add" enctype="multipart/form-data">
+		Title: <input type="text" name="title" /><br/>
+		Video: <input type="file" name="file" accept="video/*" /><br/>
+		<br/>
+	    <input type="submit" value="Upload" />
+	</form>
+	<a href="/">Back to home page</a>
+</body>
+</html>

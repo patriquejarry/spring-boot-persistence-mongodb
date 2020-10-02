@@ -1,0 +1,17 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Upload Files MongoDB</title>
+	<style>
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<h1>View Photo</h1>
+	<b>Title:</b> <span th:text="${title}">name</span><br/><br/>
+	<img alt="sample" th:src="*{'data:image/png;base64,'+image}" width="800"/><br/><br/>
+	<a href="/">Back to home page</a>	
+</body>
+</html>

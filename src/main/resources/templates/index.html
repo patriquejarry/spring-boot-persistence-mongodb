@@ -1,0 +1,32 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Upload Files MongoDB</title>
+	<style>
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<h1>Home Page</h1>
+	<div th:if="${message != null}" th:text="${message}">Message</div>
+	
+	<h2>Videos</h2>
+	<a href="/videos/upload">Upload new Video</a>
+	<ul th:each="videoweb : ${videosweb}">
+		<li>
+			<a th:href="@{'/videos/' + ${videoweb.id}}" th:title="${videoweb.title}"><span th:text="${videoweb.title}"></span></a><br>
+		</li>
+	</ul>
+
+	<h2>Photos</h2>
+	<a href="/photos/upload">Upload new Photo</a>
+	<ul th:each="photoweb : ${photosweb}">
+		<li>
+			<a th:href="@{'/photos/' + ${photoweb.id}}" th:title="${photoweb.title}"><span th:text="${photoweb.title}"></span><br>
+			<img th:src="*{'data:image/png;base64,' + photoweb.image}" width="200"/></a><br>
+		</li>
+	</ul>
+</body>
+</html>
